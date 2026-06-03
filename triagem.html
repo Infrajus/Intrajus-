@@ -43,6 +43,12 @@
       const btn = document.getElementById('btnGerar');
       const form = document.getElementById('formTriagem');
       
+      // Validação básica para garantir que preencheram o nome
+      if(!document.getElementById('nome').value) {
+        alert("Por favor, preencha o seu nome.");
+        return;
+      }
+
       btn.innerHTML = "ANALISANDO DADOS...";
       btn.disabled = true;
 
@@ -53,8 +59,10 @@
         headers: { 'Accept': 'application/json' }
       });
 
-      // Redireciona para o protocolo
-      window.location.href = 'protocolo.html';
+      // Aguarda 3 segundos antes de ir para o protocolo
+      setTimeout(() => {
+        window.location.href = 'protocolo.html';
+      }, 3000);
     }
   </script>
 </body>
