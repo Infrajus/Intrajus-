@@ -21,7 +21,6 @@
       position: relative;
     }
 
-    /* CAMADA FORENSE: Agora com suas imagens reais */
     .forensic-layer {
       position: absolute;
       top: 0;
@@ -34,21 +33,21 @@
 
     .fingerprint-img {
       position: absolute;
-      width: 180px; /* Tamanho ajustável das digitais */
+      /* Diminuí o tamanho para ficar mais discreto */
+      width: 120px; 
       opacity: 0;
-      animation: scan-effect 8s infinite alternate;
+      animation: scan-effect 10s infinite alternate;
     }
 
     @keyframes scan-effect {
-      from { opacity: 0.02; transform: scale(0.95); }
-      to { opacity: 0.08; transform: scale(1.05); }
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 0.06; transform: scale(1); }
     }
 
-    /* Posicionamento das suas imagens */
-    .fp1 { top: 15%; left: 10%; }
-    .fp2 { bottom: 15%; right: 10%; animation-delay: 2s; }
+    /* Reposicionamento para os cantos e afastado do logo */
+    .fp1 { top: 5%; left: 5%; }
+    .fp2 { bottom: 5%; right: 5%; animation-delay: 3s; }
 
-    /* ESTRUTURA PRINCIPAL */
     .main-wrapper {
       max-width: 500px;
       padding: 20px;
@@ -57,10 +56,7 @@
       z-index: 1;
     }
 
-    .logo-container {
-      margin-bottom: 30px;
-    }
-
+    .logo-container { margin-bottom: 30px; }
     .logo-container img {
       width: 160px;
       height: 160px;
@@ -69,19 +65,8 @@
       margin: 0 auto;
     }
 
-    h1 {
-      color: #cbb38a;
-      letter-spacing: 2px;
-      font-size: 22px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      color: #d8c7a3;
-    }
+    h1 { color: #cbb38a; letter-spacing: 2px; font-size: 22px; margin-bottom: 20px; }
+    p { font-size: 15px; line-height: 1.6; margin-bottom: 20px; color: #d8c7a3; opacity: 0.9; }
 
     button {
       padding: 12px 30px;
@@ -92,12 +77,9 @@
       border-radius: 6px;
       font-size: 16px;
       transition: 0.3s;
+      text-transform: uppercase;
     }
-
-    button:hover {
-      background: #cbb38a;
-      color: #050d1a;
-    }
+    button:hover { background: #cbb38a; color: #050d1a; }
   </style>
 </head>
 
@@ -109,18 +91,15 @@
   </div>
 
   <div class="main-wrapper">
-    
     <div class="logo-container">
         <img src="1000527572-removebg-preview.png" alt="Logo INFRAJUS">
     </div>
 
     <h1>INFRAJUS INTELIGÊNCIA PERICIAL</h1>
-
     <p>Inteligência pericial aplicada à análise de fatos, evidências e contextos digitais.</p>
     <p>Um ambiente de triagem e compreensão técnica de situações complexas.</p>
 
     <button>INICIAR EXPERIÊNCIA</button>
-
   </div>
 
 </body>
