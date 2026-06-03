@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0b1a2a;
+  color: #d6c49a;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 80px;
+  color: #c8a85d;
+  letter-spacing: 6px;
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+}
