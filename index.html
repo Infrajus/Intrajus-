@@ -17,53 +17,139 @@
       align-items: center;
       height: 100vh;
       text-align: center;
+      position: relative; /* Para os elementos de fundo funcionarem */
+      overflow: hidden; /* Garante que as animações não quebrem o layout */
     }
+
+    /* 🔥 CORREÇÃO DO CORTE DO LOGO E LIMPEZA */
+    .logo-frame {
+      width: 160px;
+      height: 160px; /* Mantém o quadrado */
+      display: block;
+      margin: 0 auto 20px auto;
+      overflow: hidden; /* Esta linha esconde qualquer excesso (o corte indesejado) */
+      opacity: 0.9;
+    }
+
+    .logo-frame img {
+      width: 100%;
+      height: auto; /* A imagem se ajusta à largura, o excesso é cortado pelo container */
+      display: block;
+    }
+
+    /* 💎 ESTILIZAÇÃO DE LUXO DO FUNDO */
+    .forensic-texture {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1; /* Fica atrás do conteúdo */
+    }
+
+    /* Impressões Digitais (SVG ou caracteres especiais) */
+    .fingerprint {
+      position: absolute;
+      color: #cbb38a; /* Dourado */
+      font-size: 80px;
+      opacity: 0; /* Inicia invisível */
+      animation: pulsate 12s infinite ease-in-out;
+    }
+
+    /* Linhas Fotogramétricas e Redes */
+    .geo-network {
+      position: absolute;
+      color: #cbb38a;
+      opacity: 0;
+      animation: pulsate 15s infinite 2s ease-in-out; /* Começa 2s depois */
+    }
+
+    /* Definição dos pontos específicos (ajuste conforme necessário) */
+    #fp1 { top: 15%; left: 10%; font-size: 90px; }
+    #fp2 { top: 60%; right: 15%; font-size: 70px; animation-delay: 4s; }
+    #fp3 { bottom: 10%; left: 30%; font-size: 85px; animation-delay: 8s; }
+    #geo1 { top: 25%; right: 5%; font-size: 110px; }
+    #geo2 { bottom: 20%; left: 5%; font-size: 95px; animation-delay: 6s; }
+
+    /* ANIMAÇÃO DE PULSAÇÃO (Aparecer e Desaparecer) */
+    @keyframes pulsate {
+      0% { opacity: 0; transform: scale(0.95); }
+      20% { opacity: 0.03; transform: scale(1.0); } /* Pico de 3% */
+      80% { opacity: 0.03; transform: scale(1.0); } /* Mantém visível um pouco */
+      100% { opacity: 0; transform: scale(0.95); }
+    }
+
+    /* Conteúdo Principal */
     .container {
       max-width: 600px;
       padding: 40px;
+      position: relative; /* Garante que fique acima da textura */
+      z-index: 1;
     }
+
     h1 {
       color: #cbb38a;
       letter-spacing: 2px;
       font-size: 24px;
       margin-bottom: 20px;
+      font-weight: 600;
     }
+
     p {
       font-size: 15px;
       opacity: 0.9;
       line-height: 1.5;
       margin-bottom: 15px;
+      font-weight: 300;
     }
-    img {
-      width: 160px;
-      height: auto;
-      display: block;
-      margin: 0 auto 20px auto;
-    }
+
     button {
-      margin-top: 20px;
-      padding: 12px 30px;
+      margin-top: 30px;
+      padding: 12px 35px;
       border: 1px solid #cbb38a;
       background: transparent;
       color: #cbb38a;
       cursor: pointer;
-      transition: 0.3s;
+      transition: 0.4s;
       border-radius: 6px;
       font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
+
     button:hover {
       background: #cbb38a;
       color: #050d1a;
+      box-shadow: 0 0 10px rgba(203, 179, 138, 0.4);
     }
   </style>
 </head>
 
 <body>
 
+  <div class="forensic-texture">
+    <span class="fingerprint" id="fp1">◌</span> <span class="fingerprint" id="fp2">◎</span>
+    <span class="fingerprint" id="fp3">◉</span>
+    <span class="geo-network" id="geo1">⧇</span> <span class="geo-network" id="geo2">⨀</span>
+  </div>
+
   <div class="container">
-    <img src="Screenshot_20260526_004700_Gallery.jpg" alt="Logo INFRAJUS">
+    
+    <div class="logo-frame">
+        <img src="Screenshot_20260526_004700_Gallery.jpg" alt="Logo INFRAJUS">
+    </div>
 
     <h1>INFRAJUS INTELIGÊNCIA PERICIAL</h1>
+
+    <p>Inteligência pericial aplicada à análise de fatos, evidências e contextos digitais.</p>
+
+    <p>Um ambiente de triagem e compreensão técnica de situações complexas.</p>
+
+    <button>INICIAR EXPERIÊNCIA</button>
+  </div>
+
+</body>
+</html>
 
     <p>Inteligência pericial aplicada à análise de fatos, evidências e contextos digitais.</p>
 
