@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel Pericial | INFRAJUS</title>
+  <style>
+    body {
+      margin: 0; padding: 20px;
+      background-color: #050d1a;
+      color: #d8c7a3;
+      font-family: sans-serif;
+    }
+    .header { border-bottom: 1px solid #cbb38a; padding-bottom: 10px; margin-bottom: 20px; }
+    h1 { color: #cbb38a; text-transform: uppercase; font-size: 20px; }
+    
+    table {
+      width: 100%; border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #cbb38a;
+      padding: 12px;
+      text-align: left;
+    }
+    th { background: rgba(203, 179, 138, 0.1); }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Painel de Controle - INFRAJUS</h1>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Protocolo</th>
+        <th>Interessado</th>
+        <th>Data</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>INF-9928374-X</td>
+        <td>Exemplo Silva</td>
+        <td>03/06/2026</td>
+        <td><button>Visualizar</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <button onclick="window.location.href='login.html'">SAIR</button>
+
+</body>
+</html>
 
