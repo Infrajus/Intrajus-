@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+      <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
@@ -17,11 +17,11 @@
       align-items: center;
       min-height: 100vh;
       text-align: center;
-      overflow: hidden; /* Mantém a organização sem barras de rolagem */
+      overflow: hidden;
       position: relative;
     }
 
-    /* CAMADA FORENSE: Efeito de Inteligência Ativa */
+    /* CAMADA FORENSE: Aumentei a visibilidade para teste */
     .forensic-layer {
       position: absolute;
       top: 0;
@@ -35,19 +35,19 @@
     .trace {
       position: absolute;
       color: #cbb38a;
-      opacity: 0;
       font-family: monospace;
-      animation: scan-effect 12s infinite ease-in-out;
+      /* Animação mais rápida e mais forte para você enxergar agora */
+      animation: test-effect 4s infinite alternate;
     }
 
-    @keyframes scan-effect {
-      0%, 100% { opacity: 0; }
-      50% { opacity: 0.04; } /* Opacidade sutil de 4% */
+    @keyframes test-effect {
+      from { opacity: 0.1; transform: scale(1); }
+      to { opacity: 0.5; transform: scale(1.2); }
     }
 
-    .trace:nth-child(1) { top: 20%; left: 10%; font-size: 100px; animation-delay: 0s; }
-    .trace:nth-child(2) { top: 60%; right: 15%; font-size: 80px; animation-delay: 4s; }
-    .trace:nth-child(3) { bottom: 15%; left: 25%; font-size: 120px; animation-delay: 8s; }
+    .trace:nth-child(1) { top: 20%; left: 10%; font-size: 80px; }
+    .trace:nth-child(2) { top: 60%; right: 15%; font-size: 60px; animation-delay: 1s; }
+    .trace:nth-child(3) { bottom: 15%; left: 25%; font-size: 100px; animation-delay: 2s; }
 
     /* ESTRUTURA PRINCIPAL */
     .main-wrapper {
