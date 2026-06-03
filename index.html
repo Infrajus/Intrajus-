@@ -1,4 +1,5 @@
-                  <!DOCTYPE html>
+                        font-size: 16px;
+      <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
@@ -13,27 +14,28 @@
       color: #d8c7a3;
       display: flex; flex-direction: column; align-items: center;
       min-height: 100vh; text-align: center;
-      overflow: hidden; position: relative;
+      position: relative;
     }
 
-    /* Navegação */
+    /* Navegação Corrigida */
     nav {
-      position: relative; z-index: 2;
+      position: relative; z-index: 10;
       padding: 20px; width: 100%;
-      display: flex; justify-content: center; gap: 20px;
+      display: flex; justify-content: center; gap: 15px;
+      background: rgba(5, 13, 26, 0.5);
     }
     .nav-btn {
       color: #cbb38a; text-decoration: none; 
       text-transform: uppercase; font-size: 11px; 
       letter-spacing: 1px; border: 1px solid #cbb38a;
-      padding: 6px 12px; border-radius: 4px;
+      padding: 8px 12px; border-radius: 4px;
       transition: 0.3s;
     }
     .nav-btn:hover { background: #cbb38a; color: #050d1a; }
 
     /* Fundo forense */
     .forensic-layer {
-      position: absolute; top: 0; left: 0;
+      position: fixed; top: 0; left: 0;
       width: 100%; height: 100%;
       pointer-events: none; z-index: 0;
     }
@@ -46,8 +48,8 @@
 
     .main-wrapper {
       max-width: 500px; padding: 20px;
-      width: 100%; position: relative; z-index: 1;
-      margin-top: 50px;
+      width: 100%; position: relative; z-index: 5;
+      margin-top: 20px;
     }
 
     .logo-container { margin-bottom: 30px; }
