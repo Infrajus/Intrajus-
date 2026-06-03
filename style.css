@@ -1,7 +1,8 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b1a2a;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  /* Azul marinho exato que você solicitou */
+  background: #050d1a;
   color: #d8c7a3;
   display: flex;
   justify-content: center;
@@ -42,15 +43,14 @@ button {
 
 button:hover {
   background: #cbb38a;
-  color: #0b1a2a;
+  color: #050d1a;
 }
 
 /* 🔬 AJUSTE DO LOGO */
 img {
   width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
+  height: auto; /* Alterado de 160px para auto para não cortar a imagem */
+  object-fit: contain; /* Alterado de cover para contain para mostrar a logo inteira */
   display: block;
   margin: 0 auto 20px auto;
 }
