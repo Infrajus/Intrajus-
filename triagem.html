@@ -2,40 +2,62 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Triagem INFRAJUS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Triagem | INFRAJUS</title>
   <style>
     body {
+      margin: 0; 
+      padding: 0;
       background-color: #050d1a;
-      color: #cbb38a;
+      color: #d8c7a3;
       font-family: sans-serif;
-      display: flex;
-      justify-content: center;
-      padding: 20px;
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+      min-height: 100vh;
     }
+
     .container {
-      width: 100%;
+      width: 90%;
       max-width: 400px;
+      background-color: #050d1a;
       border: 1px solid #cbb38a;
-      padding: 20px;
+      padding: 30px;
       border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     }
+
+    h2 { 
+      color: #cbb38a; 
+      text-align: center; 
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    }
+
+    label { display: block; margin-bottom: 5px; font-size: 14px; }
+
     input, textarea {
       width: 100%;
-      margin-bottom: 15px;
+      padding: 12px;
+      margin-bottom: 20px;
       background: #0a1628;
       border: 1px solid #cbb38a;
       color: white;
-      padding: 10px;
-      box-sizing: border-box;
+      box-sizing: border-box; /* Isso impede que o campo saia da tela */
     }
+
     button {
       width: 100%;
-      padding: 10px;
-      background: #cbb38a;
-      color: #050d1a;
-      border: none;
+      padding: 15px;
+      background: transparent;
+      color: #cbb38a;
+      border: 1px solid #cbb38a;
       cursor: pointer;
+      font-size: 16px;
+      text-transform: uppercase;
     }
+
+    button:hover { background: #cbb38a; color: #050d1a; }
   </style>
 </head>
 <body>
@@ -43,19 +65,22 @@
   <div class="container">
     <h2>TRIAGEM PERICIAL</h2>
     <form>
-      <label>Nome:</label>
-      <input type="text">
-      
-      <label>WhatsApp:</label>
-      <input type="tel">
-      
-      <label>E-mail:</label>
-      <input type="email">
-      
-      <label>Relato:</label>
-      <textarea rows="4"></textarea>
-      
-      <button type="button">ENVIAR TRIAGEM</button>
+      <label>Nome do Interessado</label>
+      <input type="text" placeholder="Nome completo">
+
+      <label>WhatsApp</label>
+      <input type="tel" placeholder="(00) 90000-0000">
+
+      <label>E-mail</label>
+      <input type="email" placeholder="seu-email@exemplo.com">
+
+      <label>Data do fato</label>
+      <input type="date">
+
+      <label>Narrativa dos Fatos</label>
+      <textarea rows="4" placeholder="Descreva o caso..."></textarea>
+
+      <button type="button">GERAR PROTOCOLO</button>
     </form>
   </div>
 
