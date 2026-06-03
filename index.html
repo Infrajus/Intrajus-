@@ -1,4 +1,4 @@
-            <!DOCTYPE html>
+                <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
@@ -7,62 +7,37 @@
   
   <style>
     body {
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
       background-color: #050d1a;
       color: #d8c7a3;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-      overflow: hidden;
-      position: relative;
+      display: flex; justify-content: center; align-items: center;
+      min-height: 100vh; text-align: center;
+      overflow: hidden; position: relative;
     }
 
     .forensic-layer {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 0;
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none; z-index: 0;
     }
 
     .fingerprint-img {
-      position: absolute;
-      /* Diminuí o tamanho para ficar mais discreto */
-      width: 120px; 
-      opacity: 0;
-      animation: scan-effect 10s infinite alternate;
+      position: absolute; width: 120px;
+      opacity: 0.06;
     }
-
-    @keyframes scan-effect {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 0.06; transform: scale(1); }
-    }
-
-    /* Reposicionamento para os cantos e afastado do logo */
     .fp1 { top: 5%; left: 5%; }
-    .fp2 { bottom: 5%; right: 5%; animation-delay: 3s; }
+    .fp2 { bottom: 5%; right: 5%; }
 
     .main-wrapper {
-      max-width: 500px;
-      padding: 20px;
-      width: 100%;
-      position: relative;
-      z-index: 1;
+      max-width: 500px; padding: 20px;
+      width: 100%; position: relative; z-index: 1;
     }
 
     .logo-container { margin-bottom: 30px; }
     .logo-container img {
-      width: 160px;
-      height: 160px;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto;
+      width: 160px; height: 160px;
+      object-fit: contain; display: block; margin: 0 auto;
     }
 
     h1 { color: #cbb38a; letter-spacing: 2px; font-size: 22px; margin-bottom: 20px; }
@@ -99,7 +74,7 @@
     <p>Inteligência pericial aplicada à análise de fatos, evidências e contextos digitais.</p>
     <p>Um ambiente de triagem e compreensão técnica de situações complexas.</p>
 
-    <button>INICIAR EXPERIÊNCIA</button>
+    <button onclick="window.location.href='triagem.html'">INICIAR EXPERIÊNCIA</button>
   </div>
 
 </body>
