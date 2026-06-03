@@ -16,17 +16,18 @@
       position: relative;
     }
 
-    /* Navegação garantida no topo */
+    /* Navegação */
     nav {
       position: relative; z-index: 10;
       padding: 20px 10px; width: 100%;
-      display: flex; justify-content: center; gap: 10px;
+      display: flex; justify-content: center; gap: 15px;
+      background: rgba(5, 13, 26, 0.8);
     }
     .nav-btn {
       color: #cbb38a; text-decoration: none; 
-      text-transform: uppercase; font-size: 10px; 
+      text-transform: uppercase; font-size: 11px; 
       letter-spacing: 1px; border: 1px solid #cbb38a;
-      padding: 6px 10px; border-radius: 4px;
+      padding: 8px 12px; border-radius: 4px;
       transition: 0.3s;
     }
     .nav-btn:hover { background: #cbb38a; color: #050d1a; }
@@ -44,29 +45,34 @@
     .main-wrapper {
       max-width: 500px; padding: 20px;
       width: 100%; position: relative; z-index: 5;
-      margin-top: 10px;
+      margin-top: 40px;
     }
 
-    .logo-container { margin-bottom: 20px; }
-    .logo-container img { width: 130px; height: 130px; object-fit: contain; }
+    /* Ajuste do Logotipo e Títulos */
+    .logo-container { margin-bottom: 10px; }
+    .logo-container img { width: 220px; height: 220px; object-fit: contain; }
 
-    /* Títulos ajustados */
-    .title-main { color: #cbb38a; font-size: 32px; margin: 0; letter-spacing: 3px; }
-    .subtitle-main { color: #d8c7a3; font-size: 18px; margin-top: 5px; letter-spacing: 1px; opacity: 0.9; }
+    .title-area { margin-bottom: 30px; }
+    .subtitle-main { 
+      color: #cbb38a; 
+      font-size: 20px; 
+      letter-spacing: 4px; 
+      text-transform: uppercase; 
+      margin: 0; 
+    }
 
-    p { font-size: 14px; line-height: 1.5; margin: 20px 0; color: #d8c7a3; opacity: 0.8; }
+    p { font-size: 14px; line-height: 1.6; margin-bottom: 30px; color: #d8c7a3; opacity: 0.8; }
 
     button {
-      padding: 12px 30px;
+      padding: 15px 40px;
       border: 1px solid #cbb38a;
       background: transparent;
       color: #cbb38a;
       cursor: pointer;
       border-radius: 6px;
-      font-size: 14px;
+      font-size: 16px;
       transition: 0.3s;
       text-transform: uppercase;
-      margin-top: 10px;
     }
     button:hover { background: #cbb38a; color: #050d1a; }
   </style>
@@ -91,15 +97,14 @@
         <img src="1000527572-removebg-preview.png" alt="Logo INFRAJUS">
     </div>
 
-    <h1 class="title-main">INFRAJUS</h1>
-    <h2 class="subtitle-main">INTELIGÊNCIA PERICIAL</h2>
+    <div class="title-area">
+        <h2 class="subtitle-main">INTELIGÊNCIA PERICIAL</h2>
+    </div>
 
-    <p>Inteligência pericial aplicada à análise de fatos, evidências e contextos digitais. Um ambiente de triagem e compreensão técnica de situações complexas.</p>
+    <p>Ambiente digital destinado à análise preliminar de demandas periciais, investigação de fatos e suporte técnico especializado.</p>
 
-    <button onclick="window.location.href='triagem.html'">ACESSAR TRIAGEM INTELIGENTE</button>
+    <button onclick="window.location.href='triagem.html'">INICIAR TRIAGEM</button>
   </div>
 
 </body>
 </html>
-font-size: 16px;
-            
