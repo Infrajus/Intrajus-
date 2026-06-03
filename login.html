@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acesso Restrito | INFRAJUS</title>
+  <style>
+    body {
+      margin: 0; padding: 0;
+      background-color: #050d1a;
+      color: #d8c7a3;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex; justify-content: center; align-items: center;
+      min-height: 100vh;
+    }
+    .login-box {
+      width: 90%; max-width: 350px;
+      padding: 30px;
+      border: 1px solid #cbb38a;
+      background: rgba(5, 13, 26, 0.9);
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    h2 { color: #cbb38a; text-transform: uppercase; margin-bottom: 25px; letter-spacing: 2px; }
+    input {
+      width: 100%; padding: 12px; margin-bottom: 15px;
+      background: #0a1628; border: 1px solid #cbb38a;
+      color: white; border-radius: 4px; box-sizing: border-box;
+    }
+    button {
+      width: 100%; padding: 12px;
+      background: #cbb38a; color: #050d1a;
+      border: none; cursor: pointer;
+      font-weight: bold; border-radius: 4px;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+    button:hover { background: #d8c7a3; }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h2>Acesso Pericial</h2>
+    <form id="loginForm">
+      <input type="text" id="user" placeholder="Usuário">
+      <input type="password" id="pass" placeholder="Senha">
+      <button type="button" onclick="verificarLogin()">ENTRAR</button>
+    </form>
+  </div>
+
+  <script>
+    function verificarLogin() {
+      const u = document.getElementById('user').value;
+      const p = document.getElementById('pass').value;
+      
+      // Credenciais de teste: Usuário: perita | Senha: 123
+      if(u === "perita" && p === "123") {
+        window.location.href = "painel.html";
+      } else {
+        alert("Acesso Negado. Verifique usuário e senha.");
+      }
+    }
+  </script>
+</body>
+</html>
 
